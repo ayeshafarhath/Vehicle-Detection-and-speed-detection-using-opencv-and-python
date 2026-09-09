@@ -1,3 +1,29 @@
-Vehicle Detection Project
-introduction
-An intelligent traffic management and surveillance is the basic need for the smart city development in India. This includes the detection of moving vehicles, estimation of their speed and detection of the speed limit violation and its registration number. This paper proposes an efficient and novel approach for the detection of moving vehicles as well as estimation of their speeds by using a single camera in daylight or properly illuminated environment. The proposed approach detects and tracks the vehicle passing through the surveillance area and keeps the record of vehicles position. In this paper vehicles tracking is based on the relative positions of the vehicles in consecutive frames. This information may be used in the Automatic Number Plate Recognition (ANPR) System for selection of those key frames where speed limit violation occurs. The average detection accuracy achieved by proposed approach is about 87.7%. The proposed approach uses cropping operation to minimize the scope of any false positive detection on both sides of road.
+# Vehicle Detection and Speed Detection using OpenCV and Python
+
+A simple computer vision project to detect vehicles and estimate their speed and distance using OpenCV Haar Cascade.
+
+### How it works
+- Uses `cars.xml` Haar Cascade to detect cars from video
+- Calculates distance from camera based on bounding box width
+- Estimates speed using time difference between two reference lines
+
+### Tech Stack
+- Python
+- OpenCV (cv2)
+- NumPy
+
+### Files in this repo
+- `speedDetect.py` - Main code for vehicle detection and speed estimation
+- `cars.xml` - Pre-trained Haar Cascade model for car detection
+- `requirements.txt` - Dependencies
+
+### Installation
+```bash
+pip install -r requirements.txt
+```
+### Usage
+1. Add your own traffic video as `car.mp4` in the same folder
+2. Run:
+```bash
+python speedDetect.py
+```
